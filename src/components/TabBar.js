@@ -103,6 +103,19 @@ export function MyTabBar({ state, descriptors, navigation }) {
             }
         })
 
+  const getIconSource = () => {
+          switch (route.name) {
+            case 'HomeScreen':
+              return require('../assets/images/house.png');
+            case 'QrScan':
+              return require('../assets/images/qrcode.png');
+            case 'DetailScreen':
+              return require('../assets/images/detail.png');
+            default:
+              return require('../assets/images/house.png');
+          }
+        }
+
         return (
           <TouchableOpacity
             key={route.key}
